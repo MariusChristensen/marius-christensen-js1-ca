@@ -17,16 +17,16 @@ async function fetchBeers() {
 
       const beerName = beers[i].name;
       const tagline = beers[i].tagline;
-      const firstbrewed = beers[i].first_brewed;
+      const firstBrewed = beers[i].first_brewed;
 
       beerContainer.innerHTML += `<div class="card">
-                                  <h4>${beerName}</h4>
+                                  <h2>${beerName}</h2>
                                   <p>${tagline}</p>
-                                  <p>First brewed: ${firstbrewed}</p>
+                                  <p>First brewed: ${firstBrewed}</p>
                                   </div>`;
     }
   } catch (error) {
-    console.log("This error has occurred: " + error);
+    console.log("This happened while trying to reach the API: " + error);
     beerContainer.innerHTML = "This happened while trying to reach the API " + error;
   }
 }
