@@ -18,12 +18,15 @@ async function fetchBeers() {
       const beerName = beers[i].name;
       const tagline = beers[i].tagline;
       const firstBrewed = beers[i].first_brewed;
+      const beerID = beers[i].id;
 
-      beerContainer.innerHTML += `<div class="card">
+      beerContainer.innerHTML += `<a href="/pages/details.html?id=${beerID}">
+                                  <div class="card">
                                   <h2>${beerName}</h2>
                                   <p>${tagline}</p>
                                   <p>First brewed: ${firstBrewed}</p>
-                                  </div>`;
+                                  </div>
+                                  </a>`;
     }
   } catch (error) {
     console.log("This happened while trying to reach the API: " + error);

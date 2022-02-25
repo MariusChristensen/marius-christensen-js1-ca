@@ -27,9 +27,11 @@ h1 {
 
 h2 {
   margin-bottom: 1em;
+  text-align: center;
 }
 
-.container {
+.container,
+.details-container {
   max-width: 90vw;
   margin: 0px auto;
 }
@@ -49,6 +51,23 @@ h2 {
 .loader img {
   max-width: 200px;
   max-height: auto;
+}
+
+.beer-details {
+  background-color: white;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.beer-image {
+  display: flex;
+  justify-content: center;
+}
+
+.beer-image img {
+  height: 130px;
 }
 
 .form-container {
@@ -76,15 +95,20 @@ label {
 }
 
 button {
-  float: right;
   background: white;
   border: 1px solid black;
   border-radius: 0.2rem;
   width: 150px;
   padding: 10px;
-  margin: 10px;
   color: black;
   cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .error-form {
