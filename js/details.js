@@ -3,6 +3,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = "https://api.punkapi.com/v2/beers/" + id;
+const title = document.querySelector("title");
 
 async function fetchBeerDetails() {
   try {
@@ -11,6 +12,7 @@ async function fetchBeerDetails() {
     beerDetails = json[0];
 
     createHTML(beerDetails);
+    createTitle(beerDetails);
   } catch (error) {
     console.log("This happened while trying to reach the API: " + error);
     beerDetailsContainer.innerHTML = "This happened while trying to reach the API " + error;
@@ -32,4 +34,8 @@ function createHTML(beerDetails) {
                                     <li>${beerDetails.food_pairing[1]}</li>
                                     <li>${beerDetails.food_pairing[2]}</li>
                                     </ul>`;
+}
+
+function createTitle(beerDetails) {
+  title.textContent = beerDetails.name;
 }

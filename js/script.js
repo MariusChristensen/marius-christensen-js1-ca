@@ -14,19 +14,7 @@ async function fetchBeers() {
       if (i === 8) {
         break;
       }
-
-      const beerName = beers[i].name;
-      const tagline = beers[i].tagline;
-      const firstBrewed = beers[i].first_brewed;
-      const beerID = beers[i].id;
-
-      beerContainer.innerHTML += `<a href="/pages/details.html?id=${beerID}">
-                                  <div class="card">
-                                  <h2>${beerName}</h2>
-                                  <p>${tagline}</p>
-                                  <p>First brewed: ${firstBrewed}</p>
-                                  </div>
-                                  </a>`;
+      createHTML(beers, i);
     }
   } catch (error) {
     console.log("This happened while trying to reach the API: " + error);
@@ -35,3 +23,13 @@ async function fetchBeers() {
 }
 
 fetchBeers();
+
+function createHTML(beers, i) {
+  beerContainer.innerHTML += `<a href="/pages/details.html?id=${beers[i].id}">
+                                  <div class="card">
+                                  <h2>${beers[i].name}</h2>
+                                  <p>${beers[i].tagline}</p>
+                                  <p>First brewed: ${beers[i].first_brewed}</p>
+                                  </div>
+                                  </a>`;
+}
