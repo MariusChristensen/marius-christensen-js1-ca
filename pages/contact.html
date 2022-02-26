@@ -14,18 +14,19 @@
     </header>
     <main class="form-container">
       <h1>Contact Us</h1>
+      <div class="success-message"></div>
       <form id="contact-form">
         <div>
           <label>
             Name:
-            <input type="name" id="name" />
+            <input type="text" id="name" />
           </label>
           <div class="error-form" id="name-error">Please enter your name</div>
         </div>
         <div>
           <label>
             Subject:
-            <input type="subject" id="subject" />
+            <input type="text" id="subject" />
           </label>
           <div class="error-form" id="subject-error">Please enter a subject with at least 10 characters</div>
         </div>
@@ -39,12 +40,12 @@
         <div>
           <label>
             Address:
-            <input type="address" id="address" />
+            <input type="text" id="address" />
           </label>
           <div class="error-form" id="address-error">Please enter an address with at least 25 characters</div>
         </div>
         <div class="form-actions">
-          <button>Submit</button>
+          <button id="submit-button">Submit</button>
         </div>
       </form>
     </main>

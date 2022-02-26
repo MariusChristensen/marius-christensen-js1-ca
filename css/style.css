@@ -79,6 +79,7 @@ form {
   padding: 1.5rem;
   background: white;
   border-radius: 0.5rem;
+  border: 1px solid black;
 }
 
 input {
@@ -94,7 +95,7 @@ label {
   margin-top: 10px;
 }
 
-button {
+#submit-button {
   background: white;
   border: 1px solid black;
   border-radius: 0.2rem;
@@ -104,11 +105,16 @@ button {
   cursor: pointer;
 }
 
+.success-message {
+  background-color: #14f8a4;
+  border-radius: 0.5em;
+}
+
 .form-actions {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .error-form {
